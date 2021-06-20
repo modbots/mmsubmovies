@@ -21,24 +21,13 @@ async def cmdescription(client, message):
     if len(message.command) > 1:
     
         chid = message.text.split(' ',maxsplit=1)[1]
-        if len(chid) == 14:
-            urldb._set(user_id, chid)
-            await message.reply_text(
-                text="ခင်ဗျား ချန်နယ်ကို ကျနော် အသိအမှတ်ပြု လိုက်ပါပြီ",
-                disable_web_page_preview=True,
-            )
-        else:
-            await message.reply_text(
-                text="မှားနေတယ် ငါ့လူ ... ချန်နယ် အိုင်ဒီ ထည့်ခိုင်းတာ ဂျင်းလာမထည့်နဲ့ လခွမ်းပဲ...",
-                disable_web_page_preview=True,
-            )
-
-    else:
+        
+        urldb._set(user_id, chid)
         await message.reply_text(
-            text="မှားနေတယ် ငါ့လူ ... ချန်နယ် အိုင်ဒီ ထည့်ပေးပါ",
+            text="ခင်ဗျား ချန်နယ်ကို ကျနော် အသိအမှတ်ပြု လိုက်ပါပြီ",
             disable_web_page_preview=True,
-        )
-
+            )
+        
 
 @Client.on_message(filters.private & filters.incoming & filters.command(['log']) & filters.user(SUDO_USERS))
 def _send_log(client, message):
