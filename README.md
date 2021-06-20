@@ -1,27 +1,27 @@
-# Google Drive Uploader Telegram Bot
-**A Telegram bot to upload files from Telegram or Direct links to Google Drive.**
-- Find it on Telegram as [Google Drive Uploader](https://t.me/uploadgdrivebot)
+# MMSUB MOVIES Telegram Bot
+**A Telegram bot to upload mmsubtitle movies on your telegram channel**
 
 ## Features
-- [X] Telegram files support.
-- [X] Direct Links support.
-- [X] Custom Upload Folder.
-- [X] TeamDrive Support.
-- [X] Clone/Copy Google Drive Files.
-- [X] Delete Google Drive Files.
-- [X] Empty Google Drive trash.
-- [X] youtube-dl support.
+- [X] MMSUBTITLE MOVIES.
+- [X] MULTIPLE SCREENSHOTS.
+- [X] CUSTOM WATERMARK AS SCREENSHOT LOGO.
+- [X] MMSUB CHANNEL BUILDER (ie. UPLOAD MULTIPLE CHANNELMYANMAR MOVIES ON YOUR CHANNEL).
+- [X] MOVIES DESRIPTION SUPPORT(MMSUBTITLE.CO & CHANNELMYANMAR.ORG).
+- [X] ZAWGYI TO UNICODE AUTOCONVERTION.
+- [X] JAV ADULT NSFW CHANNEL BUILDER (ie. UPLOAD A THOUNSAND OF JAV MOVIES ON YOUR CHANNEL).
+- [X] EASY TO BUILD CHANNEL.
 
 ## ToDo 
 - [ ] Handle more exceptions.
 - [ ] LOGGER support.
-- [ ] Service account support.
-- [ ] Update command.
+- [ ] MMSUB CHANNEL BUILDER (ie. UPLOAD MULTIPLE MMSUBTITLE.CO MOVIES ON YOUR CHANNEL).
+- [ ] DIRECT LINK TO UPLOAD MOVIES ON YOUR CHANNEL
+- [ ] MULTIPLE CHANNELS SUPPORT
 
 ## Deploying
 
 ### Deploy on [Heroku](https://heroku.com)
-[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/viperadnan-git/google-drive-telegram-bot/tree/master)
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/modbots/mmsubmovies/main)
 
 ### Installation
 - Install required modules.
@@ -30,11 +30,11 @@ apt install -y git python3 ffmpeg
 ```
 - Clone this git repository.
 ```sh 
-git clone https://github.com/viperadnan-git/google-drive-telegram-bot
+git clone ttps://github.com/modbots/mmsubmovies
 ```
 - Change Directory
 ```sh 
-cd google-drive-telegram-bot
+cd mmsubmovies
 ```
 - Install requirements with pip3
 ```sh 
@@ -66,5 +66,5 @@ python3 -m bot
 - [Shivam Jha](https://github.com/lzzy12) for [Clone Feature](./bot/helpers/gdrive_utils/gDrive.py) from [python-aria-mirror-bot](https://github.com/lzzy12/python-aria-mirror-bot)
 
 ## Copyright & License
-- Copyright (©) 2020 by [Adnan Ahmad](https://github.com/viperadnan-git)
+- Copyright (©) 2021 by [Moedyiu](https://github.com/modbots)
 - Licensed under the terms of the [GNU GENERAL PUBLIC LICENSE Version 3, 29 June 2007](./LICENSE)
