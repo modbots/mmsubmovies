@@ -11,6 +11,7 @@ from pyrogram import Client, filters
 from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton
 from bot.plugins.translation import Translation
 from bot.helpers.sql_helper import urldb
+from bot.helpers.sql_helper import chidds
 from bot.plugins.vidsearch import download_vid
 from bot.plugins.cmdescription import desonly
 
@@ -22,7 +23,7 @@ async def cmdescription(client, message):
     
         chid = message.text.split(' ',maxsplit=1)[1]
         
-        urldb._set(user_id, chid)
+        chidds._set(user_id, chid)
         await message.reply_text(
             text="ခင်ဗျား ချန်နယ်ကို ကျနော် အသိအမှတ်ပြု လိုက်ပါပြီ",
             disable_web_page_preview=True,
