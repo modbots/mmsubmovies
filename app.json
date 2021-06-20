@@ -21,13 +21,6 @@
     "SUDO_USERS": {
       "description": "List of sudo users ids, seperated by space.",
       "value": "999197022 939425014"
-    },
-    "SUPPORT_CHAT_LINK": {
-      "description": "Support Chat link in valid url format."
-    },
-    "DOWNLOAD_DIRECTORY": {
-      "description": "Custom path for downloads. Must end with a forward slash.",
-      "value": "./downloads/"
     }
   },
    "addons": [{
