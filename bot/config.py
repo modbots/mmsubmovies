@@ -1,6 +1,6 @@
 class config:
-    BOT_TOKEN = "1406408953:AAHjcYwC1Jsu4bYCwg4cO4EIBesXmwSNJTQ"
-    APP_ID = "1438968"
+    BOT_TOKEN = os.environ.get('BOT_TOKEN')
+    APP_ID = os.environ.get('APP_ID')
     API_HASH = os.environ.get('API_HASH')
     DATABASE_URL = os.environ.get('DATABASE_URL')    
     SUDO_USERS = os.environ.get('SUDO_USERS')
