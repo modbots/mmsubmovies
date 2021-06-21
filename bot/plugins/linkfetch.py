@@ -89,7 +89,7 @@ async def download(client, message, data, movies):
         files = await download_coroutine(
                 client,
                 session,
-                data,
+                datas,
                 filename ,
                 message.from_user.id,
                 a.message_id,
@@ -128,15 +128,15 @@ async def download(client, message, data, movies):
                             )
                     i = i + 1
         
-                
+        cm_desp = cmlinkfetch(movies)
+        await client.send_message(chat_id = chid,
+                            text = cm_desp)        
         await client.send_media_group(
                                         chat_id=chid,
                                         disable_notification=True,
                                         media=screenshots
                                         )
-        cm_desp = cmlinkfetch(movies)
-        await client.send_message(chat_id = chid,
-                            text = cm_desp)
+        
         
         output_vid = filename
                                 
