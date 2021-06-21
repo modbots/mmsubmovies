@@ -36,7 +36,7 @@ async def linkfetch(client, message):
         links = open(str(user_id) + ".txt", 'r')
         for link in links:
             await client.send_message(chat_id = message.from_user.id,
-                            text = "ယခုလွှင့်တင်မည့် လင့် \n" + link)
+                            text = "ယခုလွှင့်တင်မည့် ကား \n" + link)
             await load_url(link, client, message)
             
 
