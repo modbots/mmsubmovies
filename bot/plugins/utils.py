@@ -24,8 +24,9 @@ async def cmdescription(client, message):
         chid = message.text.split(' ',maxsplit=1)[1]
         
         urldb._set(user_id, chid)
+        results = urldb.search(user_id, chid)
         await message.reply_text(
-            text="ခင်ဗျား ချန်နယ်ကို ကျနော် အသိအမှတ်ပြု လိုက်ပါပြီ",
+            text="ခင်ဗျား ချန်နယ်ကို ကျနော် အသိအမှတ်ပြု လိုက်ပါပြီ" + str(results),
             disable_web_page_preview=True,
             )
         
