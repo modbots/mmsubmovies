@@ -9,6 +9,7 @@ from pyrogram import Client, filters
 from bot.config import BotCommands, Messages
 from bot.helpers.utils import CustomFilters
 from bot.plugins.translation import Translation
+from bot import LOGGER
 
 @Client.on_message(filters.private & filters.incoming & filters.command(BotCommands.Linkgen))
 async def mmsub(bot, message):
@@ -34,6 +35,7 @@ async def mmsub(bot, message):
         links = div.findAll('a')
         for a in links:
             newUrl = a['href']
+            LOGGER.info(f'CMDESCP:{user_id}: {newUrl}')
         if len(URLs) <= 21:
             URLs.append(newUrl)
       s = ', '.join(map(str,URLs)).replace(',','\n').replace(' ', '') 
