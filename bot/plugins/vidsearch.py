@@ -341,7 +341,7 @@ async def download_vid(bot,message, movies, location):
                                 )
                             )
                     i = i + 1
-        chid = urldb.search_url(message.from_user.id)
+        chid = urldb.search_url(locdl)
         await bot.send_media_group(
                             chat_id=chid,
                             disable_notification=True,
