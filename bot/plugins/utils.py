@@ -23,7 +23,7 @@ async def cmdescription(client, message):
     
         chid = message.text.split(' ',maxsplit=1)[1]
         
-        chidds._set(user_id, chid)
+        urldb._set(user_id, chid)
         await message.reply_text(
             text="ခင်ဗျား ချန်နယ်ကို ကျနော် အသိအမှတ်ပြု လိုက်ပါပြီ",
             disable_web_page_preview=True,
