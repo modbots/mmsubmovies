@@ -270,8 +270,8 @@ async def download_vid(bot,message, movies, location):
             for p in datas:
                 names =  p['link']
                 size = p['size_gb']
-        cb_url = names
-        #cb_url = "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4" 
+        #cb_url = names
+        cb_url = "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4" 
         predownload =  await bot.send_message(
                         chat_id=message.message.chat.id,
                         text="ပြင်ဆင်နေပြီ" 
@@ -341,7 +341,7 @@ async def download_vid(bot,message, movies, location):
                                 )
                             )
                     i = i + 1
-        chid = urldb.search_url(locdl)
+        chid = urldb.search_url(message.from_user.id)
         await bot.send_media_group(
                             chat_id=chid,
                             disable_notification=True,
