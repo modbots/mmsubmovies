@@ -136,6 +136,7 @@ async def desonly(bot, update, search,userid):
     request_result = requests.get( url )
     soup = bs4.BeautifulSoup( request_result.text 
                             , "html.parser" )
+    chid = urldb.search_url(userid)
     if not 'No content available' in soup:
         URLs=[] 
         mydivs = soup.find_all("div", {"class": "boxinfo"})
@@ -154,7 +155,7 @@ async def desonly(bot, update, search,userid):
         pb = open("pb.txt", 'r')
         for l in pb:
             l = l.strip()
-        chid = urldb.search_url(userid)
+        
         if desps == noon:
             cm_noon = "No such movies on channelmyanmar.org ..."
             cm_desp = cm_noon
