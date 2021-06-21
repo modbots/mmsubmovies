@@ -11,7 +11,7 @@ from pyrogram import Client, filters
 from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton
 from bot.plugins.translation import Translation
 from bot.helpers.sql_helper import urldb
-from bot.helpers.sql_helper import chidds
+from bot.helpers.sql_helper import chidss
 from bot.plugins.vidsearch import download_vid
 from bot.plugins.cmdescription import desonly
 
