@@ -89,7 +89,7 @@ async def download(client, message, data, movies):
         files = await download_coroutine(
                 client,
                 session,
-                datas,
+                data,
                 filename ,
                 message.from_user.id,
                 a.message_id,
