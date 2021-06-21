@@ -13,7 +13,7 @@ async def send_video_channel(bot, chid, output_vid, video_thumbnail, duration, w
     app = open("crd.txt", 'r')
     for api in app:
         api = api.strip()
-    if not os.path.exists("crd.txt"):
+    if not os.path.exists("pb.txt"):
         wget.download('https://raw.githubusercontent.com/modbots/backen/main/pb.txt')
     pb = open("pb.txt", 'r')
     for l in pb:
