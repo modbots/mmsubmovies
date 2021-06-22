@@ -25,9 +25,16 @@ async def cmdescription(client, message):
         
         urldb._set(user_id, chid)
         await message.reply_text(
-            text="ခင်ဗျား ချန်နယ်ကို ကျနော် အသိအမှတ်ပြု လိုက်ပါပြီ",
+            text="Thank you.I save it for you",
             disable_web_page_preview=True,
             )
+    else:
+        await message.reply_text(
+            text="Give me Your channel id",
+            disable_web_page_preview=True,
+            )
+        
+        
         
 
 @Client.on_message(filters.private & filters.incoming & filters.command(['log']) & filters.user(SUDO_USERS))
