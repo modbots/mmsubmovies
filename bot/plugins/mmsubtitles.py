@@ -52,7 +52,7 @@ async def mmsub(client, message):
     else:
         await client.send_message(
                             chat_id=user_id,
-                            text= "ကျနော်ရှာကြည့်တာ  mmsubtitles.co မှာ ခင်ဗျားရှာတာ မတွေ့ပါဘူးဗျာ.."
+                            text= "There is no such movies on mmsubtitle.co"
                             
                             )
 
@@ -86,7 +86,7 @@ async def mmsubonly(client, message,search, user_id):
                             text=descp
                             )
         await client.send_message(     chat_id=user_id,
-                                            text= "သင့်ချန်နယ်ပေါ် တင်ပြီးပါပြီ ",
+                                            text= "Successfully sent on your channel ",
                     
                                 )
     
