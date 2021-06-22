@@ -16,7 +16,7 @@ async def cmdescription(client, message):
     user_id = message.from_user.id
     if len(message.command) > 1:
         search = message.text.split(' ',maxsplit=1)[1]
-        sent_message =await message.reply_text('🕵️** Channelmyanmar ကိုမွှေနေတယ် ...**', quote=True)
+        sent_message =await message.reply_text('🕵️** Searching on Channelmyanmar .Please Wait ...**', quote=True)
         LOGGER.info(f'CMDESCP:{user_id}: {search}')
         url = "https://channelmyanmar.org/?s=" + search 
         request_result = requests.get( url )
@@ -41,7 +41,7 @@ async def cmdescription(client, message):
             for l in pb:
                 l = l.strip()
             if desps == noon:
-                cm_noon = "ကျနော် ရှာတာ channelmyanmar.org မှာ မတွေ့မိဘူးဗျ ..."
+                cm_noon = "I cannot find it on channelmyanmar.org ..."
                 await sent_message.edit(cm_noon)
             else:
                 msg_id = message.message_id
@@ -66,7 +66,7 @@ async def cmdescription(client, message):
                     if chid == "NOON":
                         await sent_message.delete()
                         await message.reply_text(
-                            text="ခင်ဗျား ချန်နယ် အိုင်ဒီလေး တော့ အရင် ထည့်ပေးပါဗျာ... "    
+                            text="Please Give Me Your Channel ID first \nUSAGE: /chid your channel id (-10054545454)... "    
                             )
                     else:
                         await sent_message.delete() 
@@ -79,7 +79,7 @@ async def cmdescription(client, message):
                                 )
     else:
         await message.reply_text(
-                            text="တစ်ခုခုတော့ ရှာလေကွာ ... "    
+                            text="Please Find Something \nUSAGE: /cm movie name(lone ranger) ... "    
                             )
 
 
@@ -177,7 +177,7 @@ async def desonly(bot, update, search,userid):
                             text=cm_desp
                             )
             await bot.send_message(     chat_id=userid,
-                                            text= "သင့်ချန်နယ်ပေါ် တင်ပြီးပါပြီ ",
+                                            text= "Already Sent To Your Channel... ",
                     
                                 )
         
