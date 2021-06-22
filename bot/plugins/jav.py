@@ -39,7 +39,7 @@ async def jav(bot, message):
         headers = {"Accept-Language": "en-US,en;q=0.5"}
         pages = np.arange(int(search))
         LOGGER.info(f'JAVBABES: walking')
-        sent_message = await message.reply_text('🕵️**သင့်ချန်နယ်အတွက် ဂျပန်ကားများ ကိုတင်ပေးပါမည်။ တခြား ဘာမှမလုပ်ပါနဲ့ ။ ဘော့ ကို ခိုင်းတာများရင် ပျက်တတ်ပါတယ်**', quote=True)
+        sent_message = await message.reply_text('🕵️**I WILL SEND JAPANESE ADULT MOVIES ON YOUR CHANNEL\nPLEASE DO NOT GIVE ME OTHER TASK UNTIL FINISH**', quote=True)
         for page in pages: 
             page = requests.get("https://javchill.com/latestMovie/" + str(page), headers=headers)
             await asyncio.sleep(5)
@@ -64,7 +64,7 @@ async def jav(bot, message):
                                 except IndexError:
                                     print("`No Fembed links found`\n")
                                 bypasser = lk21.Bypass()
-                                sent_messages = await message.reply_text('🕵️**ပတ်သက်ရှာဖွေနေတယ် ခနစောင့်.. မစောင့်နိုင်ရင် လဲနေ.. **', quote=True)
+                                sent_messages = await message.reply_text('🕵️**STILL TUNE.. **', quote=True)
                                 dl_url=bypasser.bypass_fembed(link)
                                 lst_link = []
                                 for i in dl_url:
@@ -145,7 +145,7 @@ async def jav(bot, message):
                                                     )
                                         editable = await bot.send_message(
                                                                             chat_id=message.chat.id,
-                                                                            text= "ခနစောင့် ကွာ ....",
+                                                                            text= "WAIT FOR A MOMENT ....",
                                             
                                                                             )	
 
@@ -180,8 +180,8 @@ async def jav(bot, message):
                                         for f in filelist:
                                             os.remove(f)
                                 else:
-                                    sent_message = await message.reply_text('🕵️**လီး လို လို ပဲ လွဲ နေ ပြီ ..ငလူးမ မိုးဒီယူ ကို အကြောင်း ကြား နွားလေး **', quote=True)
+                                    sent_message = await message.reply_text('🕵️**SOMETHING WENT WRONG PLEASE INFORM @moedyiu **', quote=True)
     else:
         await message.reply_text(
-                            text="တစ်ခုခုတော့ ရှာလေကွာ ... "    
+                            text="Find Something\nUSAGE: /javgen 2-1000 ... "    
                             )
