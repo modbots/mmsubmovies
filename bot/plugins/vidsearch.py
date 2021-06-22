@@ -66,7 +66,7 @@ async def mmsub(bot, message):
         basename = os.path.basename(parasename.path)
         name = basename.replace("%20", " ")
         
-        text="ကျွန်တော် တို့ဆာဗာတွင် " + str(name) + " ဟုဆိုသော ဇတ်ကားတစ်ကား တွေ့ရှိပါသည်။၄င်းဖိုင်သည် " + str(size) + " GB ခန့်ရှိသည်။ "
+        text="The movie named " + str(name) + " was found on our servers။That movie has " + str(size) + " GB in size "
                             
         await bot.send_message(
                             chat_id=user_id,
@@ -130,7 +130,7 @@ async def download_vid(bot,message, movies, location):
         upgrade = "No Such Movies Here"
         await bot.send_message(
                         chat_id=message.message.chat.id,
-                        text="ကျနော်တို့ဆာဗာမှာ ၄င်းနဲ့ပတ်သက်လို့ မရှိသေးပါ.." 
+                        text="No such movie on our server.." 
                     ) 
         return upgrade      
     else:
@@ -145,7 +145,7 @@ async def download_vid(bot,message, movies, location):
         #cb_url = "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4" 
         predownload =  await bot.send_message(
                         chat_id=message.message.chat.id,
-                        text="ပြင်ဆင်နေပြီ" 
+                        text="Preparing for download" 
                     )       
 
         dl_pathr = DOWNLOAD_DIRECTORY + locdl
@@ -175,7 +175,7 @@ async def download_vid(bot,message, movies, location):
         await predownload.delete()
         await bot.send_message(
                         chat_id=message.message.chat.id,
-                        text="သင်တောင်းဆိုတဲ့ " + str(names) + " ကို ဒေါင်းပြီးပါပြီ "
+                        text="Your requested movie named " + str(names) + " was downloaded "
                     )       
         ssgen = await bot.send_message(
                         chat_id=message.message.chat.id,
@@ -187,7 +187,7 @@ async def download_vid(bot,message, movies, location):
 								False,
 								Messages.START,
 								5,
-								5,
+								9,
                                 locdl
 							)	
       
@@ -218,7 +218,7 @@ async def download_vid(bot,message, movies, location):
                             disable_notification=True,
                             media=files
                             )
-        await ssgen.edit("SCREENSHOTS များလွှင့်တင်ပြီးပါပြီ")
+        await ssgen.edit("The SCREENSHOTS are sent on your channel ")
         
         editable = await bot.send_message(
                                                     chat_id=message.message.chat.id,
@@ -262,7 +262,7 @@ async def download_vid(bot,message, movies, location):
         await editable.delete()
         await bot.send_message(
                                                     chat_id=message.message.chat.id,
-                                                    text= "သင့်ချန်နယ်‌ပေါ် တင်ပြီးပါပြီ ",
+                                                    text= "Successfully sent on your channel ",
                     
                                 )
         os.remove(video_thumbnails)
