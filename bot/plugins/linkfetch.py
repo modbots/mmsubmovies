@@ -29,7 +29,7 @@ async def linkfetch(client, message):
     chid = urldb.search_url(user_id)
     if chid == "NOON":
         await message.reply_text(
-            text="ခင်ဗျား ချန်နယ် ကို အရင် ပြော ထား ဗျ ... လခွမ်း ပဲ"    
+            text="Please let me know your channel first\nUsage: /chid your channel id (-100456565656)"    
             )
     else:
         LOGGER.info(f'DOWNLOADING: walking')
@@ -61,7 +61,7 @@ async def load_url(url, client, message):
                     fz = "false"
                     if okk == fz:
                         await client.send_message(chat_id = message.from_user.id,
-                        text = "၄င်း " + movies + " သည် 2GB ကျော်လွန်နေပါသဖြင့် TELEGRAM ပေါ်သို့တင်လို့မရပါ")
+                        text = "The movie named " + movies + " could not upload your channel beacuse it is over 2GB and TELEGRAM nerver accept to upload over 2GB file yet")
                     else:
                         
                         await download(client, message, data, movies)
@@ -77,7 +77,7 @@ async def download(client, message, data, movies):
         LOGGER.info(f'DOWNLOADING: {movies}')
                             #files = await download_vid(movies, location)
         a = await client.send_message(chat_id = message.from_user.id,
-                                text = "၄င်း " + movies + " ဆိုတဲ့ ကားကို ဒေါင်းနေပါပြီဗျာ...")
+                                text = "The movie named " + movies + " is currently downloading")
         dl_path = DOWNLOAD_DIRECTORY + location
         parasenames = urlparse(data)
         basename = os.path.basename(parasenames.path)
@@ -102,7 +102,7 @@ async def download(client, message, data, movies):
 								False,
 								Messages.START,
 								5,
-								3,
+								9,
                                 location
 							)	
       
@@ -142,7 +142,7 @@ async def download(client, message, data, movies):
                                 
         editable = await client.send_message(
                                                     chat_id=message.from_user.id,
-                                                    text= "လွှင့်တင်ဖို့ ပြင်ဆင်နေပြီကွာ....",
+                                                    text= "Starting to upload",
                                         )
         if os.path.exists(output_vid):
             width = 100
@@ -187,5 +187,5 @@ async def download(client, message, data, movies):
             await editable.delete()
             await client.send_message(
                                                         chat_id=message.from_user.id,
-                                                        text= "တခုခုတော့ လွဲနေပြီ မင်း မိုးဒီယူ ကို အ‌‌‌ကြောင်းကြားလိုက်ပါ",
+                                                        text= "Something went wrong inforn @moedyiu",
                                             )
