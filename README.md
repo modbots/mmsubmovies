@@ -60,6 +60,17 @@ pip3 install -r requirements.txt
 python3 -m bot
 ```
 
+### Bot Commands
+```sh 
+start - စတင်ရန် 🥷
+chid - သင်၏ channel id 
+logo - သင် ၏ logo text
+cm - channelmyanmar.org
+mmsub - mmsubtitles.co
+vid - ဇတ်ကားနာမည်
+cmgen - 1မှ347 စသဖြင့်
+javgen - 2မှ1000 စသဖြင့်
+```
 ## Credits
 - [Dan](https://github.com/delivrance) for creating [PyroGram](https://pyrogram.org)
 - [Spechide](https://github.com/Spechide) for [gDriveDB.py](./bot/helpers/sql_helper/gDriveDB.py)
