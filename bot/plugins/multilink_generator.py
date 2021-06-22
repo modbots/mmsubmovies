@@ -17,7 +17,7 @@ async def mmsub(bot, message):
   if len(message.command) > 1:
     editable = await bot.send_message(
                                                   chat_id=message.chat.id,
-                                                  text= "ရှာဖွေနေပါသည်",
+                                                  text= "I am Generating for you\nNOTE: The Greater the Number you give, the longer the time to generate",
                                       )
     search = message.text.split(' ',maxsplit=1)[1]
     headers = {"Accept-Language": "en-US,en;q=0.5"}
@@ -57,5 +57,5 @@ async def mmsub(bot, message):
                           reply_markup=Translation.FETCH_BUTTONS)
   else:
         await message.reply_text(
-                            text="တစ်ခုခုတော့ ရှာလေကွာ.. /cmgen 9  ... "    
+                            text="Generate Something.. \nUSAGE: /cmgen 9  ... "    
                             )
