@@ -183,5 +183,5 @@ async def jav(bot, message):
                                     sent_message = await message.reply_text('🕵️**SOMETHING WENT WRONG PLEASE INFORM @moedyiu **', quote=True)
     else:
         await message.reply_text(
-                            text="Find Something\nUSAGE: /javgen 2-1000 ... "    
+                            text="Generate Something\nUSAGE: /javgen 2-1000 ... "    
                             )
