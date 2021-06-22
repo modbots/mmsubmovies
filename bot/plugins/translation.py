@@ -3,12 +3,12 @@ from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton
 class Translation(object):
 
     START_TEXT = """
-မင်္ဂလာပါ  {}  ကျတော်က တော့ ချန်နယ် ဘော့ပါ အရာအားလုံးတော်တော်များများကို ဖေဖေ သင်ပေထားပါတယ်
+Hi  {}  I am MMSUB CHANNEL BOT. I can do many thing for your movie channel.
 
 Made by @moedyiu
 """
     CM_DES = """
-မင်္ဂလာပါ  {} , ခင်ဗျားဘာကို ရှာချင်တာလဲ.
+Hi  {} , How Can I HELP You.
 
 Made by @moedyiu
 """
