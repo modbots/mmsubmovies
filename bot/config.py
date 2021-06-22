@@ -31,6 +31,7 @@ class Messages:
     
     NOT_AUTH = f"🔑 **You have not authenticated me to upload to any account.**\n__Send /{BotCommands.Authorize[0]} to authenticate.__"
     START = "တင်‌ပေးနေပါပြီနော် "
+    DOWNLOADING = " 🥷 Initiating Download"
     DOWNLOADED_SUCCESSFULLY = "📤 **mmsub.co...**\n**Filename:** ```{}```\n**Size:** ```{}```"
     
     
