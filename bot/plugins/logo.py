@@ -22,12 +22,12 @@ async def _logo(client, message):
         chidss._set(user_id, chid)
        
         await message.reply_text(
-                text="ခင်ဗျား ချန်နယ်ကို ကျနော် အသိအမှတ်ပြု လိုက်ပါပြီ",
+                text="Your LOGO text was saved",
                 disable_web_page_preview=True,
             )
        
     else:
         await message.reply_text(
-            text="မှားနေတယ် ငါ့လူ ... ချန်နယ် အိုင်ဒီ ထည့်ပေးပါ",
+            text="Please Let Me Know Your Logo\nUSAGE: /logo your logo text(mmsubs)",
             disable_web_page_preview=True,
         )
